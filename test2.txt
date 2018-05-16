@@ -14,11 +14,9 @@ public class Test2 {
 
 	public void extractFolder(String source) {
 		String destination = source.substring(0, source.length() - 4);
-
 		try {
-			net.lingala.zip4j.core.ZipFile zipFile = new net.lingala.zip4j.core.ZipFile(source);
 			System.out.println("Extracting : " + source + " -> " + destination);
-			zipFile.extractAll(destination);
+			new net.lingala.zip4j.core.ZipFile(source).extractAll(destination);
 
 			ZipFile zip = new ZipFile(source);
 			Enumeration zipFileEntries = zip.entries();
