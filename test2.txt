@@ -23,6 +23,7 @@ public class Test2 {
 			while (zipFileEntries.hasMoreElements()) {
 				ZipEntry entry = (ZipEntry) zipFileEntries.nextElement();
 				String currentEntry = entry.getName();
+				System.out.println(currentEntry);
 				File destFile = new File(destination, currentEntry);
 				if (currentEntry.endsWith(".zip")) {
 					extractFolder(destFile.getAbsolutePath());
